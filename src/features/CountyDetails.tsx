@@ -82,8 +82,12 @@ export default function CountyDetails({ county }: { county: County }) {
           <dd>{votes(total)}</dd>
         </div>
         <div>
-          <dt>Blank / void ballots</dt>
-          <dd>{votes(county.blank + county.void)}</dd>
+          <dt>Blank ballots</dt>
+          <dd>{votes(county.blank)}</dd>
+        </div>
+        <div>
+          <dt>Void ballots</dt>
+          <dd>{votes(county.void)}</dd>
         </div>
       </dl>
       <p className="fine-print">
